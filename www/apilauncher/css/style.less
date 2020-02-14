@@ -1,0 +1,80 @@
+.apiLauncher {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+    &Item {
+        padding: 1.5em;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        font-size: 1em;
+
+        &Title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+        &Form {
+
+            &-row {
+                width: 100%;
+                margin-bottom: 0.5em;
+
+                & label,
+                & input,
+                & select {
+                    font-size: 1.2em;
+                }
+                & input,
+                & select {
+                    max-width: 100%;
+                    padding: 0.1em;
+                    outline: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #3f3f3f;
+        }
+        &:nth-of-type(3n) {
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &Result {
+        width: 100%;
+        display: block;
+        margin-top: 4em;
+
+        &Title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+        &JSON {
+            width: 100%;
+            -ms-word-break: break-all;
+            word-break: break-all;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.apiLauncher {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+.apiLauncherItem {
+  padding: 1.5em;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.apiLauncherItemTitle {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.apiLauncherItemForm-row {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+.apiLauncherItemForm-row label,
+.apiLauncherItemForm-row input,
+.apiLauncherItemForm-row select {
+  font-size: 1.2em;
+}
+.apiLauncherItemForm-row input,
+.apiLauncherItemForm-row select {
+  max-width: 100%;
+  padding: 0.1em;
+  outline: 0;
+}
+.apiLauncherItemForm-row:last-of-type {
+  margin-bottom: 0;
+}
+.apiLauncherItem::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #3f3f3f;
+}
+.apiLauncherItem:nth-of-type(3n)::after {
+  display: none;
+}
+.apiLauncherResult {
+  width: 100%;
+  display: block;
+  margin-top: 4em;
+}
+.apiLauncherResultTitle {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.apiLauncherResultJSON {
+  width: 100%;
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+.apiLauncherResult.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
